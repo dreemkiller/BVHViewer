@@ -1,0 +1,8 @@
+#include <jni.h>
+#include <string.h>
+#include <android/log.h>
+
+#define DEBUG_TAG "BVHParser_Native"
+
+void Java_com_DreemKiller_BVHViewer_BVHLoader_BVHParse(JNIEnv *env, jobject this, InputStream is) {
+}

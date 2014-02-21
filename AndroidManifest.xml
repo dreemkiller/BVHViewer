@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.DreemKiller.BVHViewer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup = "true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".BVHViewerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BVHFileViewerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+        		<action android:name="android.intent.action.VIEW" />
+        		<category android:name="android.intent.category.BROWSABLE"/>
+        		<category android:name="android.intent.category.DEFAULT" />
+        		<data android:scheme="http"/>
+        		<data android:host="*" />
+        		<data android:pathPattern=".*\\bvh" />
+			</intent-filter>
+			<intent-filter>
+			    <action android:name="android.intent.action.VIEW" />
+			    <category android:name="android.intent.category.DEFAULT" />
+			    <data android:scheme="file" />
+			    <data android:host="*" />
+			    <data android:pathPattern=".*\\bvh" />
+			</intent-filter>
+			<intent-filter>
+    			<action android:name="android.intent.action.VIEW" />
+    			<category android:name="android.intent.category.DEFAULT"/>
+    			<data android:mimeType="*/*" android:host="*" android:pathPattern=".*.csv" />
+			</intent-filter>
+        </activity>
+        <activity android:name="com.DreemKiller.BVHViewer.BVHGLActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,27 @@
+package com.DreemKiller.BVHViewer;
+
+import android.content.Context;
+import android.opengl.GLSurfaceView;
+import android.view.MotionEvent;
+
+public class BVHViewerGLSurfaceView extends GLSurfaceView {
+
+    private BVHViewerRenderer renderer;
+    public BVHViewerGLSurfaceView(Context context, BVHNode root, double[][] channelValues) {
+        super(context);
+        
+        // set the Renderer for drawing on the GLSurfaceView
+        renderer = new BVHViewerRenderer(root, channelValues);
+        setRenderer(renderer);
+    }
+    
+    @Override
+    public boolean onTouchEvent(MotionEvent e)
+    {
+             //if(e.getAction() == MotionEvent.ACTION_DOWN)
+             //{
+        renderer.sendMotionEvent(e);
+        //     }
+        return super.onTouchEvent(e);
+    }
+}

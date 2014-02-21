@@ -1,0 +1,16 @@
+package com.DreemKiller.BVHViewer;
+
+public class BVHParseException extends Exception {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -8163593905121452393L;
+    private int lineNumber;
+    public BVHParseException(int lineNumber) {
+        this.lineNumber = lineNumber;
+    }
+    
+    public String toString() {
+        return "BVH Parse error at line:" + lineNumber;
+    }
+}

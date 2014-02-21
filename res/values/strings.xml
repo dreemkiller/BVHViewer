@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, BVHViewerActivity!</string>
+    <string name="app_name">BVHViewer</string>
+    <string name="edit_message">Edit Me!</string>
+    <string-array name="bvh_files">
+        <item>01_01.bvh</item>
+        <item>01_02.bvh</item>
+        <item>01_03.bvh</item>
+        <item>01_04.bvh</item>
+        <item>01_05.bvh</item>
+        <item>01_06.bvh</item>
+        <item>01_07.bvh</item>
+        <item>01_08.bvh</item>
+        <item>01_09.bvh</item>
+        <item>01_10.bvh</item>
+        <item>01_11.bvh</item>
+        <item>01_12.bvh</item>
+        <item>01_13.bvh</item>
+        <item>01_14.bvh</item>
+        </string-array>
+
+</resources>
